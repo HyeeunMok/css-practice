@@ -16,6 +16,7 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragrahph default: 1.6
+Large: 1.8
 
 - Letter spacing
 -0.5px
@@ -67,6 +68,7 @@ html {
   /* 1 rem = 10px with this setting */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -74,6 +76,9 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
 }
 
 /*************************************/
@@ -108,9 +113,9 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-.grid--5-cols {
+/* .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
-}
+} */
 .grid--center-v {
   align-items: center;
 }
@@ -229,6 +234,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .list-icon {
   width: 3rem;
